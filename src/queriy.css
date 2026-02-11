@@ -1,0 +1,103 @@
+/* ///////////////////////////////////////////////////////////////// */
+/* ///////////////////////////// 1200px /////////////////////////// */
+@media (max-width: 75em) {
+  html {
+    font-size: 55%;
+  }
+  .hero--text-name {
+    font-size: 7.8rem;
+  }
+}
+/* ///////////////////////////////////////////////////////////////// */
+/* ///////////////////////////// 1008px /////////////////////////// */
+@media (max-width: 63em) {
+  html {
+    font-size: 48%;
+  }
+  .hero--text-name {
+    font-size: 7rem;
+  }
+  .personality-info:not(:last-child) {
+    padding-right: 0.6rem;
+  }
+}
+/* ///////////////////////////////////////////////////////////////// */
+/* ///////////////////////////// 864px /////////////////////////// */
+@media (max-width: 54em) {
+  html {
+    font-size: 40%;
+  }
+}
+/* ///////////////////////////////////////////////////////////////// */
+/* ///////////////////////////// 736px /////////////////////////// */
+@media (max-width: 46em) {
+  html {
+    font-size: 37%;
+  }
+  .contant-about {
+    grid-template-rows: 4fr 2fr 2fr;
+    grid-template-columns: 2fr 2fr 2fr;
+  }
+
+  .about--samerise-box {
+    grid-row: 2/4;
+  }
+
+  .about-text-box {
+    grid-column: 1/-1;
+  }
+
+  .samerise-box-title {
+    font-size: 3.6rem;
+    grid-row: 1/2;
+  }
+  .samerise-box-info {
+    font-size: 3.8rem;
+    grid-row: 2/-1;
+    white-space: wrap;
+  }
+  .about--personality-info {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+  }
+  .personality-info {
+    font-size: 2.8rem;
+  }
+  .about--personality {
+    grid-row: 2/4;
+    grid-column: 2/4;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .contant-skills {
+    grid-template-columns: 1fr;
+  }
+  .frontend-skills {
+    border-bottom: 1px solid; /* ضخامت دلخواه */
+    border-image: linear-gradient(
+        to right,
+        #f8f9fa,
+        rgba(0, 0, 0, 0.6),
+        #f8f9fa
+      )
+      1;
+    margin-bottom: 1.8rem;
+  }
+  .backend-skills {
+    border-left: none;
+  }
+}
+/* ///////////////////////////////////////////////////////////////// */
+/* ///////////////////////////// 672px /////////////////////////// */
+@media (max-width: 42em) {
+  html {
+    font-size: 32%;
+  }
+}
+/* ///////////////////////////////////////////////////////////////// */
+/* ///////////////////////////// 554px /////////////////////////// */
+@media (max-width: 34em) {
+  html {
+    font-size: 27%;
+  }
+}
