@@ -290,8 +290,9 @@ lenis.on("scroll", () => {
     });
 
     lenis.scrollTo(closest, {
-      duration: 0.5,
+      duration: 0.8,
       easing: (t) => 1 - Math.pow(1 - t, 3),
     });
-  }, 120); // وقتی اسکرول تموم شد
+  }, 160); // وقتی اسکرول تموم شد
 });
+
