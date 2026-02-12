@@ -5,7 +5,7 @@
     font-size: 55%;
   }
   .hero--text-name {
-    font-size: 7.8rem;
+    font-size: 8.1rem;
   }
 }
 /* ///////////////////////////////////////////////////////////////// */
@@ -14,9 +14,9 @@
   html {
     font-size: 48%;
   }
-  .hero--text-name {
+  /* .hero--text-name {
     font-size: 7rem;
-  }
+  } */
   .personality-info:not(:last-child) {
     padding-right: 0.6rem;
   }
@@ -25,14 +25,52 @@
 /* ///////////////////////////// 864px /////////////////////////// */
 @media (max-width: 54em) {
   html {
-    font-size: 40%;
+    font-size: 42%;
   }
-}
-/* ///////////////////////////////////////////////////////////////// */
-/* ///////////////////////////// 736px /////////////////////////// */
-@media (max-width: 46em) {
-  html {
-    font-size: 37%;
+
+  .contant-hero {
+    text-align: start;
+  }
+  .id-tag {
+    margin-bottom: 4.4rem;
+  }
+  .blink {
+    font-size: 5.6rem;
+  }
+
+  .hero--text-tag {
+    font-size: 3.2rem;
+  }
+  .hero--text-name {
+    margin-bottom: 6.4rem;
+    /* font-size: 10rem; */
+    font-weight: 500;
+  }
+  .hero--text-interdution {
+    padding: 2.4rem;
+    font-size: 3rem;
+  }
+
+  .hero-btn,
+  .cta-btn {
+    padding: 1.8rem 2.6rem;
+
+    font-size: 3.2rem;
+    font-weight: 500;
+  }
+  .cta-btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    animation: moveInRightBtn 0.7s;
+    transition: all 0.3s ease;
+
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow:
+      0 1rem 4rem rgba(0, 0, 0, 0.15),
+      inset 0 0.1rem 0 rgba(255, 255, 255, 0.6),
+      inset 0 -0.1rem 0 rgba(255, 255, 255, 0.15),
+      inset 0 0 0.5rem 0.3rem rgba(255, 255, 255, 0.25);
   }
   .contant-about {
     grid-template-rows: 4fr 2fr 2fr;
@@ -86,18 +124,111 @@
   .backend-skills {
     border-left: none;
   }
-}
-/* ///////////////////////////////////////////////////////////////// */
-/* ///////////////////////////// 672px /////////////////////////// */
-@media (max-width: 42em) {
-  html {
-    font-size: 32%;
+  .project-title {
+    font-size: 3.4rem;
   }
 }
 /* ///////////////////////////////////////////////////////////////// */
-/* ///////////////////////////// 554px /////////////////////////// */
-@media (max-width: 34em) {
+/* ///////////////////////////// 654px ///////////////////////////*/
+@media (max-width: 41em) {
   html {
-    font-size: 27%;
+    /* font-size: 32%; */
+  }
+  .contant-hero {
+    text-align: center;
+  }
+  .id-tag {
+    margin-bottom: 5.5rem;
+  }
+
+  .contant-about {
+    grid-template-rows: 5fr 7fr 3fr;
+    grid-template-columns: 2fr 2fr;
+    margin-bottom: 2.2rem;
+  }
+
+  .about--samerise-box {
+    grid-row: 2/3;
+    grid-column: 1/-1;
+  }
+
+  .about-text-box {
+    grid-column: 1/-1;
+  }
+
+  .samerise-box-title {
+    font-size: 3.6rem;
+    grid-row: 1/2;
+  }
+  .samerise-box-info {
+    font-size: 3.8rem;
+    grid-row: 2/-1;
+    white-space: wrap;
+  }
+  .about--personality-info {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+    gap: 0.8rem;
+  }
+  .personality-info {
+    font-size: 2.8rem;
+  }
+  .about--personality {
+    grid-row: 3/4;
+    grid-column: 1/-1;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 6fr 4fr;
+  }
+  .contant-skills {
+    grid-template-columns: 1fr;
+  }
+  .contact-form {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 3fr 1fr;
+    column-gap: 1.6rem;
+    row-gap: 1.6rem;
+  }
+  .message-box {
+    grid-row: 4 /5;
+    grid-column: 1 / -1;
+  }
+  .medialinks {
+    grid-row: 5 /6;
+    grid-column: 1 / 2;
+  }
+  .send-box {
+    grid-row: 5/6;
+    grid-column: 2 / 3;
+  }
+  .input-box {
+    grid-column: 1 / -1;
+  }
+  label {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+  }
+  .copyright {
+    font-size: 1.8rem;
+  }
+}
+/* ///////////////////////////////////////////////////////////////// */
+/* ///////////////////////////// 512px /////////////////////////// */
+@media (max-width: 32em) {
+  html {
+    font-size: 38%;
+  }
+  .hero--text-name {
+    font-size: 7.4rem;
+  }
+  .hero--text-interdution {
+    padding: 2rem;
+    font-size: 2.6rem;
+  }
+}
+/* ///////////////////////////////////////////////////////////////// */
+/* ///////////////////////////// 432 /////////////////////////// */
+@media (max-width: 27em) {
+  html {
+    font-size: 32%;
   }
 }
