@@ -270,7 +270,6 @@ lenis.on("scroll", ({ scroll }) => {
   });
 });
 // const sections = [...document.querySelectorAll("section")];
-
 let snapTimeout;
 
 lenis.on("scroll", () => {
@@ -291,8 +290,8 @@ lenis.on("scroll", () => {
     });
 
     lenis.scrollTo(closest, {
-      duration: 0.2,
+      duration: 0.5,
       easing: (t) => 1 - Math.pow(1 - t, 3),
     });
-  }, 30); // وقتی اسکرول تموم شد
+  }, 120); // وقتی اسکرول تموم شد
 });
