@@ -127,6 +127,28 @@
   .project-title {
     font-size: 3.4rem;
   }
+  /* //////////////////////////////////// */
+  .skill-icon {
+    width: 6.8rem;
+    height: 6.8rem;
+  }
+
+  .skill-name {
+    font-size: 2.2rem;
+  }
+  .progress-box,
+  .progress {
+    height: 2.2rem;
+  }
+
+  .bar .skill-persent {
+    font-size: 2.2rem;
+    padding: 1rem 2.2rem;
+  }
+  .skills-title {
+    font-size: 5rem;
+  }
+  /* /////////////////////////////////////////// */
 }
 /* ///////////////////////////////////////////////////////////////// */
 /* ///////////////////////////// 654px ///////////////////////////*/
@@ -145,6 +167,7 @@
     grid-template-rows: 5fr 7fr 3fr;
     grid-template-columns: 2fr 2fr;
     margin-bottom: 2.2rem;
+    padding: 3.2rem;
   }
 
   .about--samerise-box {
@@ -182,6 +205,7 @@
   .contant-skills {
     grid-template-columns: 1fr;
   }
+
   .contact-form {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 3fr 1fr;
