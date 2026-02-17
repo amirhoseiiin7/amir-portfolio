@@ -108,7 +108,7 @@ main {
   color: #fff;
   display: inline-block;
   text-transform: uppercase;
-
+  font-weight: 500;
   cursor: pointer;
   transition:
     transform 0.4s ease,
@@ -182,10 +182,7 @@ main {
     inset 0 0 0.4rem 0.2rem rgba(255, 255, 255, 0.2);
   cursor: pointer;
 }
-.nav--cta-btn:hover span {
-  animation: wave 2s ease-in-out infinite;
-  display: inline-block;
-}
+
 /* /////////////////////////////////////////////////////////////////////// */
 /* /////////////////////////  HERO SECTION /////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////////// */
@@ -1143,3 +1140,47 @@ main {
   background-color: #f8f9fa;
   z-index: 999;
 }
+/* ///////////////////////////////////////////// */
+
+/*.sticky .header {
+  position: fixed;
+  top: 4.8rem;
+  bottom: 0;
+  z-index: 999;
+}
+.sticky .nav-box {
+  padding: 5rem 16rem;
+  height: 100%;
+  width: 100%;
+}
+.sticky .head--nav-link {
+  font-size: 3.2rem;
+  color: #000;
+  font-weight: 900;
+  padding: 0.6rem 1rem;
+}
+.sticky .id-box {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.sticky .nav--cta-btn {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.icon-mobile-nav {
+  width: 4.8rem;
+  height: 4.8rem;
+}
+.open-nav .head--nav {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  transform: translateX(0);
+}
+.open-nav .icon-mobile-nav[name="close-outline"] {
+  display: block;
+}
+.open-nav .icon-mobile-nav[name="menu-outline"] {
+  display: none;
+} */
