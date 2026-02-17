@@ -290,9 +290,45 @@ lenis.on("scroll", () => {
     });
 
     lenis.scrollTo(closest, {
-      duration: 0.8,
+      duration: 1,
       easing: (t) => 1 - Math.pow(1 - t, 3),
     });
-  }, 160); // وقتی اسکرول تموم شد
+  }, 190); // وقتی اسکرول تموم شد
 });
+// //////////////////////////////////////////////////////////////////////////
+// /////////////////////////////FORM BOX///////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+// Sticky navigation
 
+const sectionHeroEl = document.querySelector(".hero-section");
+
+const obs = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    console.log(ent);
+
+    if (ent.isIntersecting === false) {
+      document.body.classList.add("sticky");
+    }
+
+    if (ent.isIntersecting === true) {
+      document.body.classList.remove("sticky");
+    }
+  },
+  {
+    // In the viewport
+    root: null,
+    threshold: 0,
+    rootMargin: "-80px",
+  },
+);
+obs.observe(sectionHeroEl);
+
+///////////////////////////////////////////////////////////
+// const headerEL = document.querySelector(".header");
+// const btnNavEL = document.querySelector(".btn-mobile-nav");
+
+// btnNavEL.addEventListener("click", function () {
+//   headerEL.classList.toggle("open-nav");
+// });
