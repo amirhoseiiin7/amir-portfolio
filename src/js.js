@@ -276,13 +276,12 @@ lenis.on("scroll", () => {
   clearTimeout(snapTimeout);
 
   snapTimeout = setTimeout(() => {
-    let closest = null;
+    let closest = sections[0];
     let minDistance = Infinity;
 
     sections.forEach((section) => {
-      const distance = Math.abs(
-        section.getBoundingClientRect().top
-      );
+      const rect = section.getBoundingClientRect();
+      const distance = Math.abs(rect.top);
 
       if (distance < minDistance) {
         minDistance = distance;
@@ -290,14 +289,11 @@ lenis.on("scroll", () => {
       }
     });
 
-    if (!closest || minDistance < 20) return;
-
     lenis.scrollTo(closest, {
-      duration: 1.2,
+      duration: 1,
       easing: (t) => 1 - Math.pow(1 - t, 3),
     });
-
-  }, 350);
+  }, 190); // وقتی اسکرول تموم شد
 });
 // //////////////////////////////////////////////////////////////////////////
 // /////////////////////////////FORM BOX///////////////////////////////////
