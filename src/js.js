@@ -272,27 +272,25 @@ lenis.on("scroll", ({ scroll }) => {
   clearTimeout(snapTimeout);
 
   snapTimeout = setTimeout(() => {
-    const viewportHeight = window.innerHeight;
-
     let closest = null;
-    let minDistance = Infinity;
+let minDistance = Infinity;
 
-    sections.forEach((section) => {
-      const rect = section.getBoundingClientRect();
-      const distance = Math.abs(rect.top);
+sections.forEach((section) => {
+  const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+  const distance = Math.abs(sectionTop - lastScroll);
 
-      if (distance < minDistance) {
-        minDistance = distance;
-        closest = section;
-      }
-    });
+  if (distance < minDistance) {
+    minDistance = distance;
+    closest = section;
+  }
+});
 
-    if (!closest || minDistance < 5) return;
+if (!closest || minDistance < 5) return;
 
     isSnapping = true;
 
     lenis.scrollTo(closest, {
-      duration: 0.8,
+      duration: 1.2,
       easing: (t) => 1 - Math.pow(1 - t, 3),
       onComplete: () => {
         isSnapping = false;
