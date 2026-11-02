@@ -253,30 +253,28 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     }
   });
 });
+
 const sections = document.querySelectorAll("[data-snap]");
+
+let snapTimeout;
+let isSnapping = false;
+let lastScroll = 0;
 
 sections.forEach((section, index) => {
   section.dataset.index = index;
 });
 
 lenis.on("scroll", ({ scroll }) => {
-  const viewportHeight = window.innerHeight;
-  sections.forEach((section) => {
-    const rect = section.getBoundingClientRect();
-    if (rect.top >= 0 && rect.top < viewportHeight / 2) {
-      // موقعیت بخش در وسط viewport
-      // اگر خواستی میتونی highlight یا کلاس اضافه کنی
-    }
-  });
-});
-// const sections = [...document.querySelectorAll("section")];
-let snapTimeout;
+  lastScroll = scroll;
 
-lenis.on("scroll", () => {
+  if (isSnapping) return;
+
   clearTimeout(snapTimeout);
 
   snapTimeout = setTimeout(() => {
-    let closest = sections[0];
+    const viewportHeight = window.innerHeight;
+
+    let closest = null;
     let minDistance = Infinity;
 
     sections.forEach((section) => {
@@ -289,12 +287,20 @@ lenis.on("scroll", () => {
       }
     });
 
+    if (!closest || minDistance < 5) return;
+
+    isSnapping = true;
+
     lenis.scrollTo(closest, {
-      duration: 1,
+      duration: 0.8,
       easing: (t) => 1 - Math.pow(1 - t, 3),
+      onComplete: () => {
+        isSnapping = false;
+      },
     });
-  }, 190); // وقتی اسکرول تموم شد
+  }, 350);
 });
+
 // //////////////////////////////////////////////////////////////////////////
 // /////////////////////////////FORM BOX///////////////////////////////////
 // //////////////////////////////////////////////////////////////////////////
