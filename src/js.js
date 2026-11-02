@@ -247,6 +247,7 @@ requestAnimationFrame(raf);
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", (e) => {
     e.preventDefault();
+    if (anchor.getAttribute("href") === "#") return;
     const target = document.querySelector(anchor.getAttribute("href"));
     if (target) {
       lenis.scrollTo(target); // scroll نرم به target
